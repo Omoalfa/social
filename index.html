@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <title>Frontend Mentor | [social Media Dashboard]</title>
@@ -18,32 +18,40 @@
   <header>
     <h2 class="header">Social Media Dashboard</h2>
     <p>Total Followers: 23,004</p>
-    <p id="toggler">Dark Mode<span id="toggle-button"><span></span></span></p>
+    <p id="toggler">Dark Mode<span id="toggle-button" onclick="toggle()"><span id="ball"></span></span></p>
   </header>
   <div id="overview">
-    <div>
-      <p><img src="./images/icon-facebook.svg" alt="FB icon" />@nathanf</p>
-      <p class="value">1987</p>
-      <p>FOLLOWERS</p>
-      <p class="today"><img src="./images/icon-up.svg" />12 Today</p>
+    <div id="facebook" class="contain">
+      <div>
+        <p><img src="./images/icon-facebook.svg" alt="FB icon" />@nathanf</p>
+        <p class="value">1987</p>
+        <p>FOLLOWERS</p>
+        <p class="today"><img src="./images/icon-up.svg" />12 Today</p>
+      </div>
     </div>
-    <div>
-      <p><img src="./images/icon-twitter.svg" alt="Twitter icon" />@nathanf</p>
-      <p class="value">1044</p>
-      <p>FOLLOWERS</p>
-      <p class="today"><img src="./images/icon-up.svg" />90 Today</p>
+    <div id="twitter" class="contain">
+      <div>
+        <p><img src="./images/icon-twitter.svg" alt="Twitter icon" />@nathanf</p>
+        <p class="value">1044</p>
+        <p>FOLLOWERS</p>
+        <p class="today"><img src="./images/icon-up.svg" />90 Today</p>
+      </div>
     </div>
-    <div>
-      <p><img src="./images/icon-instagram.svg" alt="IG icon" />@realnathanf</p>
-      <p class="value">11k</p>
-      <p>FOLLOWERS</p>
-      <p class="today"><img src="./images/icon-up.svg" />1099 Today</p>
+    <div id="instagram" class="contain">
+      <div>
+        <p><img src="./images/icon-instagram.svg" alt="IG icon" />@realnathanf</p>
+        <p class="value">11k</p>
+        <p>FOLLOWERS</p>
+        <p class="today"><img src="./images/icon-up.svg" />1099 Today</p>
+      </div>
     </div>
-    <div id="last-div">
-      <p><img src="./images/icon-youtube.svg" alt="YouTube icon" />@nathanf</p>
-      <p class="value">8239</p>
-      <p>SUBSCRIBERS</p>
-      <p class="today"><img src="./images/icon-down.svg" />144 Today</p>
+    <div id="youtube" class="contain">
+      <div id="last-div">
+        <p><img src="./images/icon-youtube.svg" alt="YouTube icon" />@nathanf</p>
+        <p class="value">8239</p>
+        <p>SUBSCRIBERS</p>
+        <p class="today"><img src="./images/icon-down.svg" />144 Today</p>
+      </div>
     </div>
   </div> 
   <h3>Today's Overview</h3>
@@ -54,18 +62,18 @@
         <p><img src="./images/icon-facebook.svg" alt=""></p>
       </div>
       <div class="down">
-        <p></p>
-        <p><img src="./images/icon-up.svg" alt="">%</p>
+        <p class="dvalue">87</p>
+        <p class="increase"><img src="./images/icon-up.svg" alt="">3%</p>
       </div>
     </div>
-    <div id="Today">
+    <div>
       <div class="up">
         <p>likes</p>
         <p><img src="./images/icon-facebook.svg" alt=""></p>
       </div>
       <div class="down">
-        <p></p>
-        <p><img src="./images/icon-up.svg" alt="">%</p>
+        <p class="dvalue">52</p>
+        <p class="decrease"><img src="./images/icon-down.svg" alt="">2%</p>
       </div>
     </div>
     <div>
@@ -74,8 +82,8 @@
         <p><img src="./images/icon-instagram.svg" alt=""></p>
       </div>
       <div class="down">
-        <p></p>
-        <p><img src="./images/icon-up.svg" alt=""></p>
+        <p class="dvalue">5562</p>
+        <p class="increase"><img src="./images/icon-up.svg" alt="">2257%</p>
       </div>
     </div>
     <div>
@@ -84,8 +92,8 @@
         <p><img src="./images/icon-instagram.svg" alt=""></p>
       </div>
       <div class="down">
-        <p></p>
-        <p><img src="./images/icon-up.svg" alt=""></p>
+        <p class="dvalue">52k</p>
+        <p class="increase"><img src="./images/icon-up.svg" alt="">1375%</p>
       </div>
     </div>
     <div>
@@ -94,8 +102,8 @@
         <p><img src="./images/icon-twitter.svg" alt=""></p>
       </div>
       <div class="down">
-        <p></p>
-        <p><img src="./images/icon-up.svg" alt=""></p>
+        <p class="dvalue">117</p>
+        <p class="increase"><img src="./images/icon-up.svg" alt="">303%</p>
       </div>
     </div>
     <div>
@@ -104,8 +112,8 @@
         <p><img src="./images/icon-twitter.svg" alt=""></p>
       </div>
       <div class="down">
-        <p></p>
-        <p><img src="./images/icon-up.svg" alt=""></p>
+        <p class="dvalue">507</p>
+        <p class="increase"><img src="./images/icon-up.svg" alt="">553%</p>
       </div>
     </div>
     <div>
@@ -114,8 +122,8 @@
         <p><img src="./images/icon-youtube.svg" alt=""></p>
       </div>
       <div class="down">
-        <p></p>
-        <p><img src="./images/icon-up.svg" alt=""></p>
+        <p class="dvalue">107</p>
+        <p class="decrease"><img src="./images/icon-down.svg" alt="">19%</p>
       </div>
     </div>
     <div>
@@ -124,12 +132,13 @@
         <p><img src="./images/icon-youtube.svg" alt=""></p>
       </div>
       <div class="down">
-        <p></p>
-        <p><img src="./images/icon-up.svg" alt=""></p>
+        <p class="dvalue">1007</p>
+        <p class="decrease"><img src="./images/icon-down.svg" alt="">12%</p>
       </div>
     </div>
   </div> 
 
+  <script src="./script.js"></script>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
