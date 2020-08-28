@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    transition: .3s ease-in-out;
 }
 body {
     padding: 0% 5%;
@@ -29,8 +30,11 @@ header p {
     width: 40px;
     height: 20px;
     border-radius: 10px;
-    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    background-color: hsl(230, 22%, 74%);
     margin: 5px 0 0 5px;
+}
+#ball {
+    background: hsl(225, 100%, 98%);
 }
 #toggle-button span {
     display: inline-block;
@@ -142,4 +146,25 @@ h3 {
 #youtube {
     background-color: hsl(348, 97%, 39%);
 }
-/*  */
+
+
+/* Dark View */
+body.dark {
+    background-color: hsl(232, 19%, 15%);
+    color: hsl(228, 34%, 66%);
+}
+h3.dark, h2.dark, .value.dark, .dvalue.dark {
+    color: white;
+}
+#overview .contain div.dark, #lower  div.dark {
+    background-color: hsl(228, 28%, 20%);
+}
+header.dark, #ball.dark {
+    background-color: hsl(230, 17%, 14%);
+}
+#toggle-button.dark {
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+#ball.dark {
+    margin-left: 20px;
+}
